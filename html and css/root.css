@@ -1,0 +1,20 @@
+:root[data-theme="light"] {
+  /* Navbar */
+  --bg-color: #ebebeb;
+  --container-color: white;
+  --container-shadow: 0px 0px 3px #00000033;
+  --text-color: #000000;
+  --btn-hover: #ebebeb;
+  
+  --dropdown-color: #cddafc;
+
+  /* Other */
+}
+
+:root[data-theme="dark"] {
+  --bg-color: #050507;
+  --container-color: #2b2b30;
+  --container-shadow: 0px 0px 3px #ffffff33;
+  --text-color: #e8edfc;
+  --btn-hover: #545457;
+}

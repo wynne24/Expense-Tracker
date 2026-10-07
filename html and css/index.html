@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="root.css">
+
+    <title>Pre HTML and CSS</title>
+
+    <!-- Font from Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- Header -->
+    <nav>
+      <section class="left-sec">
+        <a class="chevron-left">
+          <svg class="svg-chevron-left" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="m15 18-6-6 6-6"/>
+          </svg>
+        </a>
+        <span class="page-title">Overview</span>
+        <a class="chevron-right">
+          <svg class="svg-chevron-right" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </a>
+      </section>
+
+      <section class="right-sec">
+        <select>
+          <option value="today">Today</option>
+          <option value="week">Week</option>
+          <option value="month">Month</option>
+          <option value="year">Year</option>
+          <option value="ytd">YTD</option>
+        </select>
+
+        <div class="theme-switcher">
+          <input id="light-theme" type="radio" name="theme-changer" checked>
+          <label for="light-theme">
+            <svg viewBox="0 0 24 24" stroke="currentColor">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+          </label>
+
+          <input id="dark-theme" type="radio" name="theme-changer">
+          <label for="dark-theme">
+            <svg viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+            </svg>
+          </label>
+        </div>
+
+        <a class="user-icon">
+          <svg viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M17.925 20.056a6 6 0 0 0-11.851.001" />
+            <circle cx="12" cy="11" r="4" />
+            <circle cx="12" cy="12" r="10" />
+          </svg>
+        </a>
+      </section>
+    </nav>
+  </body>
+</html>
