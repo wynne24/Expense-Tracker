@@ -1,9 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: Inter, Roboto;
+
+  transition: background-color 0.6s;
+
+  display: flex;
+}
+
+/* Lucide Icons */
+svg {
+  color: var(--text-primary);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  height: 24px;
+}
+
+/* -------------------------- SIDEBAR */
+aside {
+  height: 100dvh;
+  min-width: 250px;
+  margin: 10px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--container-color);
+  border-radius: 12px;
+  box-shadow: var(--container-shadow);
+}
+aside .sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 10px 0 10px;
+}
+aside .sidebar-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  flex: 1;
+}
+aside .sidebar-list li a {
+  display: flex;
+}
 
 
 /* -------------------------- NAVBAR */
 nav {
   height: 55px;
-  margin: 10px;
+  margin: 10px 10px 10px 0;
+  flex: 1;
 
   display: flex;
   justify-content: space-between;
@@ -23,7 +78,7 @@ nav .left-sec, nav .right-sec {
 nav .left-sec {
   gap: 5px;
   font-size: 16px;
-  color: var(--text-color);
+  color: var(--text-primary);
 }
 /* Icons */
 .chevron-left, .chevron-right {
@@ -64,26 +119,21 @@ nav .right-sec {
 }
 
 /* Theme Switcher */
-.theme-switcher {
-  display: flex;
-  align-items: center;
-}
-.theme-switcher input[type="radio"] {
-  display: none;
-}
-.theme-switcher label {
+.theme-switcher-btn {
+  background-color: var(--container-color);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 24px;
   width: 24px;
+  border: none;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.15s;
 }
-.theme-switcher label svg {
+.theme-switcher-btn svg {
   height: 18px;
-}.theme-switcher label:hover {
+}.theme-switcher-btn:hover {
   background-color: var(--bg-color);
 }
 

@@ -21,7 +21,7 @@ nav .left-sec, nav .right-sec {
 nav .left-sec {
   gap: 5px;
   font-size: 16px;
-  color: var(--text-color);
+  color: var(--text-primary);
 }
 /* Icons */
 .chevron-left, .chevron-right {
