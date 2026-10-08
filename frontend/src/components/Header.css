@@ -1,11 +1,11 @@
 /* -------------------------- NAVBAR */
 nav {
-  max-height: 55px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex: 1;
+
+  grid-area: header;
 
   background-color: var(--container-color);
   border-radius: 12px;

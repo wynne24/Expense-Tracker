@@ -6,6 +6,8 @@ main {
   flex-direction: column;
   flex: 1;
 
+  grid-area: main;
+
   background-color: var(--container-color);
   border-radius: 12px;
   transition: background-color 0.3s ease, color 0.3s ease;

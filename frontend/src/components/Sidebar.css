@@ -7,6 +7,8 @@ aside {
   display: flex;
   flex-direction: column;
 
+  grid-area: sidebar;
+
   background-color: var(--container-color);
   border-radius: 12px;
   box-shadow: var(--container-shadow);

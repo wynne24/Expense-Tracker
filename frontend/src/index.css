@@ -24,7 +24,12 @@ svg {
 
   padding: 10px;
   gap: 10px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  grid-template-rows: 55px 1fr;
+  grid-template-areas: 
+    "sidebar header"
+    "sidebar main";
 
   transition: background-color 0.3s;
 }
