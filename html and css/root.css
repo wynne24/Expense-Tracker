@@ -3,7 +3,9 @@
   --bg-color: #ebebeb;
   --container-color: white;
   --container-shadow: 0px 0px 3px #00000033;
-  --text-color: #000000;
+  --text-primary: rgb(0, 0, 0 ,0.87);
+  --text-secondary: rgb(0, 0, 0 ,0.60);
+  --text-disabled: rgb(0, 0, 0 ,0.38);
   --btn-hover: #ebebeb;
   
   --dropdown-color: #cddafc;

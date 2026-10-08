@@ -21,10 +21,11 @@ svg {
   fill: none;
   height: 24px;
 }
+/* -------------------------------------------------------------------------------------------------------- */
 
 /* -------------------------- SIDEBAR */
 aside {
-  height: 100dvh;
+  height: calc(100dvh - 40px);
   min-width: 250px;
   margin: 10px;
   padding: 10px;
@@ -35,24 +36,89 @@ aside {
   background-color: var(--container-color);
   border-radius: 12px;
   box-shadow: var(--container-shadow);
+  transition: background-color 0.6s;
 }
 aside .sidebar-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3px 10px 0 10px;
+  border-bottom: 1px solid var(--text-disabled);
+  gap: 10px;
+  height: 30px;
+  padding: 3px 10px 10px 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
+aside .sidebar-header a {
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: bold;
+  text-decoration: none;
+
+  svg {
+    height: 30px;
+  }
+}
+aside .sidebar-header button {
+  display: flex;
+  padding: 3px;
+  border: none;
+  background-color: var(--container-color);
+  transition: background-color 0.6s;
+  cursor: pointer;
+
+  svg {
+    color: var(--text-secondary);
+    height: 18px;
+  }
+}
+aside .sidebar-header button:hover {
+  border: none;
+  border-radius: 8px;
+  background-color: var(--btn-hover);
+  transition: background-color 0.6s;
+  cursor: pointer;
+
+  svg {
+    color: var(--text-primary);
+  }
+}
+
+/* Lists */
 aside .sidebar-list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   flex: 1;
 }
-aside .sidebar-list li a {
-  display: flex;
+.sidebar-top, .sidebar-btm {
+  list-style: none;
 }
+aside .sidebar-list li a {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 10px;
+  gap: 10px;
+  transition: all 0.15s;
 
+  svg {
+    color: var(--text-secondary);
+    height: 20px;
+  }
+}
+aside .sidebar-list li a:hover {
+  transform: translateX(3px);
+  color: var(--text-primary);
+  svg {
+    color: var(--text-primary);
+  }
+}
+/* -------------------------------------------------------------------------------------------------------- */
 
 /* -------------------------- NAVBAR */
 nav {
@@ -67,6 +133,7 @@ nav {
   background-color: var(--container-color);
   border-radius: 12px;
   box-shadow: var(--container-shadow);
+  transition: background-color 0.6s;
 }
 nav .left-sec, nav .right-sec {
   display: flex;
@@ -95,7 +162,7 @@ nav .left-sec {
   height: 18px;
 }
 .chevron-left:hover, .chevron-right:hover {
-  background-color: var(--bg-color);
+  background-color: var(--btn-hover);
 }
 
 /* --------------- Right Section */
@@ -134,7 +201,7 @@ nav .right-sec {
 .theme-switcher-btn svg {
   height: 18px;
 }.theme-switcher-btn:hover {
-  background-color: var(--bg-color);
+  background-color: var(--btn-hover);
 }
 
 /* User Profile Icon */
@@ -149,3 +216,5 @@ nav .right-sec {
   height: 100%;
   stroke-width: 1.3px;
 }
+
+/* -------------------------------------------------------------------------------------------------------- */
