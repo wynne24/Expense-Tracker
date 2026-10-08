@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>frontend</title>
 
+    <script>
+      try {
+        document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light';
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <style>
+      html,
+      body {
+        background-color: #ebebeb;
+      }
+
+      html[data-theme="dark"],
+      html[data-theme="dark"] body {
+        background-color: #050507;
+      }
+    </style>
+
     <!-- Font from Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

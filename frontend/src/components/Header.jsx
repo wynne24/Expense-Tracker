@@ -3,10 +3,11 @@ import { ChevronLeftIcon, ChevronRightIcon, MoonIcon, SunIcon, ProfileIcon } fro
 import { useState, useEffect } from 'react'
 
 export function Header() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || "light");
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {

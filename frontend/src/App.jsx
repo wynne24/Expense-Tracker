@@ -19,7 +19,7 @@ function App() {
         <Route path="wallet" element={<HomePage />} />
         <Route path="goals" element={<HomePage />} />
         <Route path="profile" element={<HomePage />} />
-        <Route path="setting" element={<HomePage />} />
+        <Route path="settings" element={<HomePage />} />
       </Routes>
     </>
   )
