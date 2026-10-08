@@ -21,41 +21,22 @@ export function HouseIcon() {
 }
 export function ArrowLeftRightIcon() {
   return (
-    <svg viewBox="0 0 24 24" stroke="currentColor">
-      <path d="M8 3 4 7l4 4" />
-      <path d="M4 7h16" />
-      <path d="m16 21 4-4-4-4" />
-      <path d="M20 17H4" />
-    </svg>
+    <svg viewBox="0 0 24 24" stroke="currentColor"><path d="M8 3 4 7l4 4" /><path d="M4 7h16" /><path d="m16 21 4-4-4-4" /><path d="M20 17H4" /></svg>
   );
 }
 export function ChartPieIcon() {
   return (
-    <svg viewBox="0 0 24 24" stroke="currentColor">
-      <path
-        d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"
-      />
-      <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
-    </svg>
+    <svg viewBox="0 0 24 24" stroke="currentColor"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"/><path d="M21.21 15.89A10 10 0 1 1 8 2.83" /></svg>
   );
 }
 export function WalletIcon() {
   return (
-    <svg viewBox="0 0 24 24" stroke="currentColor">
-      <path
-        d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"
-      />
-      <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" />
-    </svg>
+    <svg viewBox="0 0 24 24" stroke="currentColor"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></svg>
   );
 }
 export function GoalIcon() {
   return (
-    <svg viewBox="0 0 24 24" stroke="currentColor">
-      <path d="M12 13V2l8 4-8 4" />
-      <path d="M20.561 10.222a9 9 0 1 1-12.55-5.29" />
-      <path d="M8.002 9.997a5 5 0 1 0 8.9 2.02" />
-    </svg>
+    <svg viewBox="0 0 24 24" stroke="currentColor"><path d="M12 13V2l8 4-8 4" /><path d="M20.561 10.222a9 9 0 1 1-12.55-5.29" /><path d="M8.002 9.997a5 5 0 1 0 8.9 2.02" /></svg>
   );
 }
 export function SettingsIcon() {

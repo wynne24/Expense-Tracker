@@ -68,7 +68,7 @@ nav .right-sec {
 
 /* Theme Switcher */
 .theme-switcher-btn {
-  background-color: var(--container-color);
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,12 +84,13 @@ nav .right-sec {
   }
 }
 .theme-switcher-btn:hover {
-  background-color: var(--btn-hover);
+  opacity: 0.7;
 }
 /* User Profile Icon */
 .user-icon {
   height: 40px;
   cursor: pointer;
+  transition: all 0.15s;
 
   svg {
   height: 100%;
