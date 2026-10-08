@@ -1,14 +1,11 @@
 /* -------------------------- SIDEBAR */
 aside {
   height: calc(100dvh - 40px);
-  min-width: calc(290px - 40px);
-  margin: 10px 0 10px 10px;
+  min-width: 250px;
   padding: 10px;
 
   display: flex;
   flex-direction: column;
-
-  grid-area: sidebar;
 
   background-color: var(--container-color);
   border-radius: 12px;

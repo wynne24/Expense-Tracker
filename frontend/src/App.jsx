@@ -10,17 +10,19 @@ function App() {
     <>
       <Sidebar />
 
-      <Header />
+      <div className="layout">
+        <Header />
       
-      <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="transactions" element={<HomePage />} />
-        <Route path="dashboard" element={<HomePage />} />
-        <Route path="wallet" element={<HomePage />} />
-        <Route path="goals" element={<HomePage />} />
-        <Route path="profile" element={<HomePage />} />
-        <Route path="settings" element={<HomePage />} />
-      </Routes>
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="transactions" element={<HomePage />} />
+          <Route path="dashboard" element={<HomePage />} />
+          <Route path="wallet" element={<HomePage />} />
+          <Route path="goals" element={<HomePage />} />
+          <Route path="profile" element={<HomePage />} />
+          <Route path="settings" element={<HomePage />} />
+        </Routes>
+      </div>
     </>
   )
 }
