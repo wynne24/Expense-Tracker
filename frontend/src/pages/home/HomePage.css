@@ -1,6 +1,7 @@
 
 main {
   padding: 10px;
+  gap: 10px;
 
   display: flex;
   flex-direction: column;
@@ -8,11 +9,36 @@ main {
 
   grid-area: main;
 
-  background-color: var(--container-color);
+  color: var(--text-primary);
+  background-color: var(--bg-color-main);
   border-radius: 12px;
   transition: background-color 0.3s ease, color 0.3s ease;
 
   svg {
     transition: color 0.3s ease;
   }
+}
+
+main .page-title {
+  padding: 10px;
+  
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+}
+
+main .card {
+  height: 200px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: var(--container-shadow);
+  background-color: var(--container-color);
+  transition: background-color 0.3s ease;
 }

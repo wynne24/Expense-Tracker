@@ -6,9 +6,16 @@ export function HomePage() {
       <title>Overview</title>
 
       <main>
-        <p>Overview</p>
+        <div className="page-title">
+          <h1>Overview</h1>
+          <p>You're getting richer, great job! 😉</p>
+        </div>
 
-        <div className="container1">HI</div>
+        <div className="card">
+          Context
+          Context
+          Context
+        </div>
       </main>
     </>
   );
