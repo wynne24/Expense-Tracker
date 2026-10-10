@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router'
 import { Header } from './components/Header'
 import { Sidebar } from './components/Sidebar'
 import { HomePage }from './pages/home/HomePage'
+import { TransactionPage }from './pages/transaction/TransactionPage'
 import { DashboardPage }from './pages/dashboard/DashboardPage'
 import { GoalPage }from './pages/goal/GoalPage'
 import { WalletPage }from './pages/wallet/WalletPage'
@@ -18,7 +19,7 @@ function App() {
     
       <Routes>
         <Route index element={<HomePage />} />
-        <Route path="transactions" element={<HomePage />} />
+        <Route path="transactions" element={<TransactionPage />} />
         <Route path="dashboard" element={<DashboardPage />} />
         <Route path="wallet" element={<WalletPage />} />
         <Route path="goals" element={<GoalPage />} />

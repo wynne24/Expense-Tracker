@@ -7,20 +7,24 @@
   --text-primary: rgb(0, 0, 0 ,0.87);
   --text-secondary: rgb(0, 0, 0 ,0.60);
   --text-disabled: rgb(0, 0, 0 ,0.38);
-  --btn-hover: #ebebeb;
+  --btn-hover: rgb(235, 235, 245);
   
   --dropdown-color: #cddafc;
 
   /* Other */
+  --purple: #6366f1;
+  --gradient-normal: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+  --gradient-light: linear-gradient(135deg, #7274ef 0%, #9971f5 50%, #b671f7 100%);
+  --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
 }
 
 :root[data-theme="dark"] {
   --bg-color: rgb(5, 5, 15);
-  --bg-color-main: rgb(30, 30, 40);
-  --container-color: rgb(45, 45, 55);
+  --bg-color-main: rgb(20, 20, 30);
+  --container-color: rgb(30, 30, 40);
   --container-shadow: 0px 0px 3px rgba(255, 255, 255, 0.2);
   --text-primary: rgb(255, 255, 255 ,0.87);
   --text-secondary: rgb(255, 255, 255 ,0.60);
   --text-disabled: rgb(255, 255, 255 ,0.38);
-  --btn-hover: #545457;
+  --btn-hover: rgb(60, 60, 70);
 }

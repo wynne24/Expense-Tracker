@@ -1,7 +1,7 @@
 import './Sidebar.css'
 import { PiggyBankIcon, PanelOpenIcon, PanelCloseIcon, HouseIcon, ArrowLeftRightIcon, ChartPieIcon, WalletIcon, GoalIcon, ProfileIcon, SettingsIcon } from './Icons/Icons'
 import { useState } from 'react'
-import { Link } from 'react-router'
+import { NavLink } from 'react-router'
 
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
@@ -11,13 +11,13 @@ export function Sidebar() {
   }
 
   return (
-    <aside>
+    <aside className={isOpen ? "show" : "hide"}>
       <div className="sidebar-header">
-        <Link to="/">
+        <NavLink to="/">
           <PiggyBankIcon />
   
           <p>LILPIGGY</p>
-        </Link>
+        </NavLink>
 
         <button onClick={toggleSidebar}>
           {isOpen ? <PanelCloseIcon /> : <PanelOpenIcon />}
@@ -27,49 +27,49 @@ export function Sidebar() {
       <div className="sidebar-list">
         <ul className="sidebar-top">
           <li>
-            <Link to="/">
+            <NavLink to="/">
               <HouseIcon />
               <p>Overview</p>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/transactions">
+            <NavLink to="/transactions">
               <ArrowLeftRightIcon />
               <p>Transactions</p>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/dashboard">
+            <NavLink to="/dashboard">
               <ChartPieIcon />
               <p>Dashboard</p>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/wallet">
+            <NavLink to="/wallet">
               <WalletIcon />
               <p>Accounts / Wallet</p>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="goals">
+            <NavLink to="goals">
               <GoalIcon />
               <p>Goals / Budget Planning</p>
-            </Link>
+            </NavLink>
           </li>
         </ul>
 
         <ul className="sidebar-btm">
           <li>
-            <Link to="profile">
+            <NavLink to="profile">
               <ProfileIcon />
               <p>Profile</p>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="settings">
+            <NavLink to="settings">
               <SettingsIcon />
               <p>Settings</p>
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

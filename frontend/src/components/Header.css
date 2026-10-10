@@ -4,8 +4,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex: 1;
-
+  height: 55px;
+  
   grid-area: header;
+  position: sticky;
+  top: 0;
 
   background-color: var(--container-color);
   border-radius: 12px;
