@@ -17,9 +17,7 @@ aside {
   transition: 
     background-color 0.3s ease, 
     color 0.3s ease,
-    width 0.3s ease,
-    padding 0.3s ease,
-    margin-left 0.3s ease;
+    width 0.3s ease;
 
   svg {
     transition: color 0.3s ease;
@@ -32,20 +30,21 @@ aside.hide {
   width: 50px;
 
   .sidebar-header {
-    padding-left: 2px;
-    justify-content: center;
+    justify-content: space-between;
   }
-  .sidebar-header a {
+  .sidebar-header a,
+  .sidebar-header p {
     max-width: 0;
     opacity: 0;
   }
   .sidebar-header button {
-    margin-left: 0;
+    transform: translateX(-6px);
   }
 
   .sidebar-list li a svg {
     flex-shrink: 0;
-    margin-left: 5px;
+    transform: translateX(5px);
+    transition: transform 0.3s;
   }
 }
 
@@ -68,6 +67,9 @@ aside .sidebar-header a {
   color: var(--text-primary);
   display: flex;
   align-items: center;
+  max-width: 125px;
+  overflow: hidden;
+  white-space: nowrap;
   gap: 20px;
   font-weight: bold;
   text-decoration: none;
@@ -78,6 +80,8 @@ aside .sidebar-header a {
 
   svg {
     height: 30px;
+    width: 30px;
+    fill: rgba(255, 174, 189, 0.5);
   }
 }
 
@@ -93,6 +97,7 @@ aside .sidebar-header button {
   svg {
     color: var(--text-secondary);
     height: 18px;
+    width: 18px;
   }
 }
 
@@ -120,9 +125,9 @@ aside .sidebar-list p {
   max-width: 200px;
   opacity: 1;
   transition: 
-  max-width 0.3s ease, 
-  opacity 0.2s ease,
-  color 0.15s;
+    max-width 0.3s ease, 
+    opacity 0.3s ease,
+    color 0.15s;
 }
 aside.hide p {
   max-width: 0px;
@@ -147,6 +152,8 @@ aside .sidebar-list li a {
   svg {
     color: var(--text-secondary);
     height: 20px;
+    width: 20px;
+    transition: transform 0.3s ease;
   }
 }
 aside .sidebar-list li a:hover {
@@ -165,9 +172,7 @@ aside .sidebar-list li a:hover {
 .sidebar-list li:has(a.active) {
   background-color: var(--btn-hover);
   border-radius: 10px;
-  transition: 
-    background-color 0.3s ease,
-    border 0.3s ease;
+  transition: all 0.3s ease;
 }
 .sidebar-list li:has(a.active)::before {
   content: "";
@@ -178,5 +183,5 @@ aside .sidebar-list li a:hover {
   height: 35px;
   background: var(--purple);
   border-radius: 2px;
-  transform: translate(-6px, -50%)
+  transform: translate(-6.5px, -50%);
 }

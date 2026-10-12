@@ -1,0 +1,30 @@
+
+.wallet-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-wallet {
+  background: var(--gradient-normal);
+  box-shadow: var(--btn-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+
+  svg {
+    stroke-width: 3px;
+    height: 20px;
+    color: var(--btn-text);
+  }
+}
+.add-wallet:hover {
+  opacity: 0.8;
+  svg {color: white;}
+}

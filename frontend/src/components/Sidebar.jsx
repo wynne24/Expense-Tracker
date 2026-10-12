@@ -1,10 +1,10 @@
 import './Sidebar.css'
-import { PiggyBankIcon, PanelOpenIcon, PanelCloseIcon, HouseIcon, ArrowLeftRightIcon, ChartPieIcon, WalletIcon, GoalIcon, ProfileIcon, SettingsIcon } from './Icons/Icons'
+import { PiggyBank, PanelRight, PanelLeft, House, ArrowLeftRight, ChartPie, Wallet, Goal, CircleUserRound, Settings } from 'lucide-react'
 import { useState } from 'react'
 import { NavLink } from 'react-router'
 
 export function Sidebar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(window.innerWidth > 800);
 
   const toggleSidebar = () => {
     setIsOpen((cur) => cur ? false : true);
@@ -14,13 +14,13 @@ export function Sidebar() {
     <aside className={isOpen ? "show" : "hide"}>
       <div className="sidebar-header">
         <NavLink to="/">
-          <PiggyBankIcon />
+          <PiggyBank />
   
           <p>LILPIGGY</p>
         </NavLink>
 
         <button onClick={toggleSidebar}>
-          {isOpen ? <PanelCloseIcon /> : <PanelOpenIcon />}
+          {isOpen ? <PanelLeft /> : <PanelRight />}
         </button>
       </div>
 
@@ -28,31 +28,31 @@ export function Sidebar() {
         <ul className="sidebar-top">
           <li>
             <NavLink to="/">
-              <HouseIcon />
+              <House />
               <p>Overview</p>
             </NavLink>
           </li>
           <li>
             <NavLink to="/transactions">
-              <ArrowLeftRightIcon />
+              <ArrowLeftRight />
               <p>Transactions</p>
             </NavLink>
           </li>
           <li>
             <NavLink to="/dashboard">
-              <ChartPieIcon />
+              <ChartPie />
               <p>Dashboard</p>
             </NavLink>
           </li>
           <li>
             <NavLink to="/wallet">
-              <WalletIcon />
+              <Wallet />
               <p>Accounts / Wallet</p>
             </NavLink>
           </li>
           <li>
             <NavLink to="goals">
-              <GoalIcon />
+              <Goal />
               <p>Goals / Budget Planning</p>
             </NavLink>
           </li>
@@ -61,13 +61,13 @@ export function Sidebar() {
         <ul className="sidebar-btm">
           <li>
             <NavLink to="profile">
-              <ProfileIcon />
+              <CircleUserRound />
               <p>Profile</p>
             </NavLink>
           </li>
           <li>
             <NavLink to="settings">
-              <SettingsIcon />
+              <Settings />
               <p>Settings</p>
             </NavLink>
           </li>

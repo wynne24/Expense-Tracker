@@ -1,5 +1,5 @@
 import './Header.css'
-import { ChevronLeftIcon, ChevronRightIcon, MoonIcon, SunIcon, ProfileIcon } from './Icons/Icons'
+import { ChevronLeft, ChevronRight, Moon, Sun, CircleUserRound } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 export function Header() {
@@ -18,11 +18,11 @@ export function Header() {
     <nav>
       <section className="left-sec">
         <a className="chevron-left">
-          <ChevronLeftIcon />
+          <ChevronLeft />
         </a>
         <span className="page-title">Overview</span>
         <a className="chevron-right">
-          <ChevronRightIcon />
+          <ChevronRight />
         </a>
       </section>
     
@@ -36,11 +36,11 @@ export function Header() {
         </select>
 
         <button className="theme-switcher-btn" onClick={toggleTheme}>
-          {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+          {theme === "dark" ? <Sun /> : <Moon />}
         </button>
 
         <a className="user-icon">
-          <ProfileIcon />
+          <CircleUserRound />
         </a>
       </section>
     </nav>
