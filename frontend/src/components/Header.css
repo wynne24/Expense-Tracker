@@ -5,7 +5,7 @@ nav {
   align-items: center;
   flex: 1;
   height: 55px;
-  
+  min-width: 0;
   grid-area: header;
   position: sticky;
   top: 0;
@@ -23,6 +23,7 @@ nav .left-sec, nav .right-sec {
   display: flex;
   align-items: center;
   padding: 10px;
+  min-width: 0;
 }
 
 /* -------------- Left Section */

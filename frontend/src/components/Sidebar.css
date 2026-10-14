@@ -173,6 +173,9 @@ aside .sidebar-list li a:hover {
   background-color: var(--btn-hover);
   border-radius: 10px;
   transition: all 0.3s ease;
+  svg {
+    color: var(--text-primary);
+  }
 }
 .sidebar-list li:has(a.active)::before {
   content: "";

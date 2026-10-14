@@ -45,7 +45,7 @@ export function Sidebar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/wallet">
+            <NavLink to="/accounts">
               <Wallet />
               <p>Accounts / Wallet</p>
             </NavLink>

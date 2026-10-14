@@ -1,13 +1,13 @@
 
-.wallet-page-header {
+.account-page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.add-wallet {
+.add-account {
   background: var(--gradient-normal);
-  box-shadow: var(--btn-shadow);
+  box-shadow: var(--container-shadow);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,15 +16,21 @@
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  transition: opacity 0.15s ease;
+  transition: 
+    opacity 0.15s ease,
+    transform 0.2s ease;
 
   svg {
     stroke-width: 3px;
     height: 20px;
+    width: 20px;
     color: var(--btn-text);
   }
 }
-.add-wallet:hover {
-  opacity: 0.8;
+.add-account:hover {
+  opacity: 0.7;
   svg {color: white;}
+}
+.add-account:active {
+  transform: translateY(2px);
 }

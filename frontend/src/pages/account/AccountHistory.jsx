@@ -15,7 +15,7 @@ export function WalletForm() {
       </div>
 
       <div>
-        Wallet History
+        Account History
         today +฿3,000.00
       </div>
     </>
