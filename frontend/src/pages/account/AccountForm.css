@@ -1,7 +1,6 @@
 
 dialog::backdrop {
-  background: rgb(0 0 0 / 50%);
-  backdrop-filter: blur(2px);
+  background: rgb(0 0 0 / 60%);
 }
 
 dialog:not([open]) {
@@ -95,6 +94,10 @@ dialog .icon-selector {
   label:has(input:checked) {
     background: var(--gradient-normal);
     box-shadow: var(--btn-shadow);
+
+    svg {
+      color: var(--btn-text);
+    }
   }
 
   svg {
@@ -167,7 +170,7 @@ dialog select:focus {
 
 .submit-form-btn {
   font-weight: bold;
-  color: var(--text-primary);
+  color: var(--btn-text);
   background: var(--gradient-normal);
   margin-top: 10px;
   align-self: end;

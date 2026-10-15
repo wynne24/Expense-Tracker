@@ -1,0 +1,124 @@
+ul {list-style: none;}
+
+.account-history-container {
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  height: calc(100% - 20px);
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.today-list,
+.account-list {
+  background-color: var(--container-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--container-shadow);
+  transition: all 0.3s ease;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+.today-list {
+  width: 40%;
+}
+.list-header {
+  color: var(--btn-text);
+  background-color: var(--header-purple);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(35px - 20px);
+  padding: 10px;
+  font-weight: 600;
+}
+.list-header .name {
+  gap: 5px;
+  font-weight: 600;
+}
+.list-header .sub-text {
+    color: var(--btn-secondary);
+    font-size: 14px;
+    margin: 2px 10px 0 0;
+    font-weight: normal;
+  }
+.list-header .filter {
+  border: none;
+  border-radius: 12px;
+  padding: 2px;
+  color: var(--text-secondary);
+  background-color: var(--container-color);
+  transition: all 0.3s ease;
+  /* appearance: none; */
+}
+.list-header .filter:focus {
+  outline: 2px solid var(--purpink);
+}
+.list-header .income-expense {
+  gap: 40px;
+
+  .income {
+    color: var(--up);
+  }
+  .expense {
+    color: var(--down);
+  }
+  .sub-text {
+    margin: 3px 0 0 0;
+  }
+  div {
+    gap: 5px;
+  }
+}
+
+
+/* Lists */
+.list {
+  overflow-y: auto;
+}
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--list-line);
+
+  .expense {
+    font-size: 14px;
+    color: var(--down);
+  }
+}
+.list .list-detail {
+  gap: 20px;
+  font-size: 14px;
+}
+.category svg {
+  background-color: orange;
+  border-radius: 8px;
+  padding: 5px;
+}
+.list .note {
+  margin-top: 1px;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+
+  svg {
+    color: var(--text-secondary);
+    height: 12px;
+    width: 12px;
+  }
+}
+
+.account-list {
+  flex: 1;
+}
+.account-list .list-header {
+  background-color: var(--header-purpink);
+}

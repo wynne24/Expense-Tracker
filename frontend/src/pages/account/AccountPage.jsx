@@ -1,5 +1,7 @@
 import './AccountPage.css'
 import { AccountForm } from './AccountForm'
+import { AccountCard } from './AccountCard'
+import { AccountHistory } from './AccountHistory'
 import { Plus } from 'lucide-react'
 import { useRef } from 'react'
 
@@ -25,10 +27,13 @@ export function AccountPage() {
           <button className="add-account" onClick={addAccountForm}>
             <Plus />
           </button>
-
         </div>
 
         <AccountForm dialogRef={dialogRef} />
+
+        <AccountCard />
+
+        <AccountHistory />
       </main>
     </>
   );

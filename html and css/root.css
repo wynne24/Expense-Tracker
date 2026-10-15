@@ -7,29 +7,42 @@
   --text-primary: rgb(0, 0, 0 ,0.87);
   --text-secondary: rgb(0, 0, 0 ,0.60);
   --text-disabled: rgb(0, 0, 0 ,0.38);
+  --list-line: rgb(0, 0, 0 ,0.1);
   --btn-hover: rgb(235, 235, 245);
 
 
   --btn-text: rgb(225, 225, 225);
+  --btn-secondary: rgb(185, 185, 185);
   --btn-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  --btn-inset: 0px 0px 5px rgba(255, 255, 255, 0.4);
+  --btn-glow: 0px 0px 3px rgba(255, 255, 255, 0.4);
   --dropdown-color: #cddafc;
 
   /* Other */
+  --header-purple: rgb(51, 53, 136);
+  --header-purpink: #583a9f;
   --purple: #6366f1;
   --purpink: #8b5cf6;
   --gradient-normal: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
   --gradient-light: linear-gradient(135deg, #7274ef 0%, #9971f5 50%, #b671f7 100%);
   --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
+
+  /* Stock Color */
+  --up: rgb(119, 173, 119);
+  --down: rgb(190, 128, 128);
+  --stock-up: rgb(0, 150, 0);
+  --stock-down: rgb(200, 0, 0);
 }
 
 :root[data-theme="dark"] {
-  --bg-color: rgb(5, 5, 15);
+  --bg-color: rgb(5, 5, 5);
   --bg-color-main: rgb(20, 20, 30);
   --container-color: rgb(30, 30, 40);
   --container-shadow: 0px 0px 3px rgba(255, 255, 255, 0.2);
   --text-primary: rgb(255, 255, 255 ,0.87);
   --text-secondary: rgb(255, 255, 255 ,0.60);
   --text-disabled: rgb(255, 255, 255 ,0.38);
+  --list-line: rgb(255, 255, 255 ,0.1);
 
   --btn-hover: rgb(60, 60, 70);
   --btn-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4);

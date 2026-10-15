@@ -20,19 +20,17 @@ export function Header() {
         <a className="chevron-left">
           <ChevronLeft />
         </a>
-        <span className="page-title">Overview</span>
+        <span className="page-title">Wallet-1</span>
         <a className="chevron-right">
           <ChevronRight />
         </a>
       </section>
     
       <section className="right-sec">
+        <p>Cash</p>
+
         <select>
-          <option value="today">Today</option>
-          <option value="week">Week</option>
-          <option value="month">Month</option>
-          <option value="year">Year</option>
-          <option value="ytd">YTD</option>
+          <option value="today">$3,000.00</option>
         </select>
 
         <button className="theme-switcher-btn" onClick={toggleTheme}>

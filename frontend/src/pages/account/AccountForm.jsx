@@ -43,7 +43,7 @@ export function AccountForm({ dialogRef }) {
           <div className="icon-selector">
             <label htmlFor="piggy-bank">
               <PiggyBank />
-              <input id="piggy-bank" type="radio" name="icon-pick"/>
+              <input id="piggy-bank" type="radio" name="icon-pick" defaultChecked />
             </label>
 
             <label htmlFor="wallet">

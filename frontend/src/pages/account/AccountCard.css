@@ -1,0 +1,120 @@
+
+.account-container {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  gap: 10px;
+}
+
+.current-account {
+  background: var(--bg-color);
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  height: 200px;
+  transition: background-color 0.3s ease;
+}
+
+.account-box {
+  background-color: var(--bg-color);
+  box-shadow: inset var(--container-shadow);
+  display: flex;
+  border-radius: 12px;
+  overflow-x: auto;
+  padding: 10px;
+  gap: 10px;
+  height: calc(200px - 20px);
+  width: calc(100% - 20px);
+  transition: background-color 0.3s ease;
+}
+
+/* Card */
+.account-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--container-color);
+  box-shadow: var(--container-shadow);
+  border-radius: 8px;
+  min-width: 360px;
+  height: calc(100% - 20px);
+  padding: 10px;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Card header */
+.account-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--text-disabled);
+
+  .account-name {
+    margin-left: 5px;
+    color: var(--text-primary);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  h {
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-right: 3px;
+  }
+  p {
+    color: var(--text-secondary);
+    font-weight: bold;
+    font-size: 14px;
+  }
+  span {
+    color: var(--btn-text);
+    background: var(--gradient-normal);
+    border-radius: 16px;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: inset var(--btn-inset);
+    margin-bottom: 8px;
+    transition: box-shadow 0.3s ease;
+  }
+}
+.header-left-sec div { 
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Card body */
+.account-balance {
+  font-weight: bold;
+  font-size: 40px;
+  padding: 10px 0;
+}
+
+.account-total {
+  display: flex;
+}
+
+.account-total-expense,
+.account-total-income {
+  h {
+    color: var(--text-secondary);
+    font-size: 12px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+.account-total-income {
+  width: 53%;
+  p {
+    color: var(--up);
+  }
+}
+.account-total-expense p {
+  color: var(--down);
+}
