@@ -3,7 +3,8 @@ ul {list-style: none;}
 .account-history-container {
   background-color: var(--bg-color);
   border-radius: 12px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 40% 1fr;
   gap: 10px;
   height: calc(100% - 20px);
   padding: 10px;
@@ -23,9 +24,6 @@ ul {list-style: none;}
     align-items: center;
     gap: 10px;
   }
-}
-.today-list {
-  width: 40%;
 }
 .list-header {
   color: var(--btn-text);
@@ -60,7 +58,7 @@ ul {list-style: none;}
   outline: 2px solid var(--purpink);
 }
 .list-header .income-expense {
-  gap: 40px;
+  justify-content: space-between;
 
   .income {
     color: var(--up);
@@ -121,4 +119,14 @@ ul {list-style: none;}
 }
 .account-list .list-header {
   background-color: var(--header-purpink);
+}
+
+@media (max-width: 700px) {
+  .account-history-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sub-text {
+    display: none;
+  }
 }

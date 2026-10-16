@@ -1,5 +1,5 @@
 import './AccountForm.css'
-import { X, Wallet, CreditCard, Landmark, PiggyBank, Banknote, Bitcoin, CircleDollarSign, Coins } from 'lucide-react'
+import { X, PiggyBank } from 'lucide-react'
 import { useState } from 'react'
 
 const currencies = [
@@ -8,33 +8,53 @@ const currencies = [
   { code: "EUR", name: "Euro", symbol: "€" },
 ];
 
-export function AccountForm({ dialogRef }) {
-  const [currency, setCurrency] = useState("USD");
-  const [name, setName] = useState('New Account');
+export function AccountForm({ dialogRef, addAccount, icons }) {
+  const
+    [account, setAccount] = useState({
+      icon: "piggy-bank",
+      name: "New Account",
+      type: "cash",
+      currency: "$",
+      description: "",
+      current: false,
+      income: 0,
+      expense: 0,
+    });
 
   const closeAccountForm = () => {
     dialogRef.current.close();
   }
 
   const handleCurrency = (e) => {
-    setCurrency(e.target.value);
-  }
-  const getCurrencySymbol = (code) => {
-    const symbol = currencies.find(c => c.code === code).symbol;
-    return symbol;
+    setAccount(cur => ({...cur,
+      currency: e.target.value
+    }));
   }
 
   const handleNameChange = (e) => {
     const v = e.target.value;
-    v ? setName(v) : setName('New Account');
+    v ? setAccount(cur => ({...cur, name: v})) : 
+    setAccount(cur => ({...cur, name: 'New Account'}));
+  }
+
+  const handleIconChange = (e) => {
+    setAccount(cur => ({...cur, icon: e.target.id}));
   }
 
   return (
     <>
       <dialog ref={dialogRef}>
-        <form method="dialog">
+        <form 
+          method="dialog"
+          onSubmit={(e) => {
+            e.preventDefault();
+            addAccount(account);
+            closeAccountForm();
+            e.currentTarget.reset();
+          }}
+        >
           <div className="form-header">
-            <p>{name}</p>
+            <p>{account.name}</p>
             <button type="button" onClick={closeAccountForm}>
               <X />
             </button>
@@ -43,43 +63,22 @@ export function AccountForm({ dialogRef }) {
           <div className="icon-selector">
             <label htmlFor="piggy-bank">
               <PiggyBank />
-              <input id="piggy-bank" type="radio" name="icon-pick" defaultChecked />
+              <input id="piggy-bank" type="radio" name="icon-pick" 
+                onChange={handleIconChange}
+                defaultChecked
+              />
             </label>
 
-            <label htmlFor="wallet">
-              <Wallet />
-              <input id="wallet" type="radio" name="icon-pick"/>
-            </label>
-
-            <label htmlFor="credit-card">
-              <CreditCard />
-              <input id="credit-card" type="radio" name="icon-pick"/>
-            </label>
-
-            <label htmlFor="banknote">
-              <Banknote />
-              <input id="banknote" type="radio" name="icon-pick"/>
-            </label>
-
-            <label htmlFor="landmark">
-              <Landmark />
-              <input id="landmark" type="radio" name="icon-pick"/>
-            </label>
-
-            <label htmlFor="circle-dollar-sign">
-              <CircleDollarSign />
-              <input id="circle-dollar-sign" type="radio" name="icon-pick"/>
-            </label>
-
-            <label htmlFor="coins">
-              <Coins />
-              <input id="coins" type="radio" name="icon-pick"/>
-            </label>
-
-            <label htmlFor="bitcoin">
-              <Bitcoin />
-              <input id="bitcoin" type="radio" name="icon-pick"/>
-            </label>
+            {icons.map((icon) => {
+              return (
+                <label key={icon.id} htmlFor={icon.id}>
+                  <icon.svg />
+                  <input id={icon.id} type="radio" name="icon-pick" 
+                    onChange={handleIconChange}
+                  />
+                </label>
+              );
+            })}
           </div>
 
           <div className="input-container">
@@ -101,11 +100,13 @@ export function AccountForm({ dialogRef }) {
               <div className="select-input">
                 <p>Type</p>
 
-                <select>
-                  <option value="">Cash</option>
-                  <option value="">Bank Account</option>
-                  <option value="">Credit Card</option>
-                  <option value="">Investment Port</option>
+                <select value={account.type} onChange={(e) => {
+                  setAccount(cur => ({...cur, type: e.target.value}))}
+                }>
+                  <option value="cash">Cash</option>
+                  <option value="bank-account">Bank Account</option>
+                  <option value="credit-card">Credit Card</option>
+                  <option value="investment-port">Investment Port</option>
                 </select>
               </div>
             </div>
@@ -114,15 +115,21 @@ export function AccountForm({ dialogRef }) {
               <div className="text-input">
                 <p>Initial balance</p>
 
-                <input type="number" placeholder={`${getCurrencySymbol(currency)}0.00`}/>
+                <input 
+                  type="number" 
+                  placeholder={`${account.currency}0.00`}
+                  onChange={(e) => {
+                    setAccount(cur => ({...cur, income: Number(e.target.value)}))
+                  }}
+                />
               </div>
 
               <div className="select-input">
                 <p>Currency</p>
                 
-                <select value={currency} onChange={handleCurrency}>
+                <select value={account.currency} onChange={handleCurrency}>
                   {currencies.map((c) => (
-                    <option key={c.code} value={c.code}>
+                    <option key={c.code} value={c.symbol}>
                       {`${c.symbol} ${c.code} ${c.name}`}
                     </option>
                   ))}
@@ -133,10 +140,18 @@ export function AccountForm({ dialogRef }) {
 
           <div className="text-input">
             <p>Description</p>
-            <input type="text"/>
+            <input 
+              type="text"
+              onChange={(e) => {
+                setAccount(cur => ({...cur, description: e.target.value}))
+              }}
+            />
           </div>
 
-          <button className="submit-form-btn" type="submit">Create</button>
+          <button 
+            className="submit-form-btn" 
+            type="submit"
+          >Create</button>
         </form>
       </dialog>
     </>

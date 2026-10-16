@@ -2,14 +2,37 @@ import './AccountPage.css'
 import { AccountForm } from './AccountForm'
 import { AccountCard } from './AccountCard'
 import { AccountHistory } from './AccountHistory'
-import { Plus } from 'lucide-react'
-import { useRef } from 'react'
+import { Plus, Wallet, CreditCard, Landmark, Banknote, Bitcoin, CircleDollarSign, Coins } from 'lucide-react'
+import { useRef, useState, useEffect } from 'react'
+
+const icons = [
+  {id: "wallet", svg: Wallet},
+  {id: "credit-card", svg: CreditCard},
+  {id: "banknote", svg: Banknote},
+  {id: "landmark", svg: Landmark},
+  {id: "circle-dollar-sign", svg: CircleDollarSign},
+  {id: "coins", svg: Coins},
+  {id: "bitcoin", svg: Bitcoin},
+]
 
 export function AccountPage() {
+  const [accounts, setAccounts] = useState([]);
   const dialogRef = useRef(null);
+
+  useEffect(() => {
+    console.log(accounts);
+  }, [accounts]);
 
   const addAccountForm = () => {
     dialogRef.current.showModal();
+  }
+
+  const addAccount = (account) => {
+    setAccounts(cur => [...cur, {
+      ...account,
+      id: crypto.randomUUID(),
+      current: cur.length === 0,
+    }]);
   }
 
   return (
@@ -29,11 +52,11 @@ export function AccountPage() {
           </button>
         </div>
 
-        <AccountForm dialogRef={dialogRef} />
+        <AccountForm dialogRef={dialogRef} addAccount={addAccount} icons={icons} />
 
-        <AccountCard />
+        <AccountCard accounts={accounts} icons={icons} />
 
-        <AccountHistory />
+        <AccountHistory accounts={accounts} />
       </main>
     </>
   );

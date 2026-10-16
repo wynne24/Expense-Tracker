@@ -1,5 +1,5 @@
 import './AccountHistory.css'
-import { Pizza, NotebookPen, PiggyBank } from 'lucide-react'
+import { Pizza, NotebookPen } from 'lucide-react'
 
 export function AccountHistory() {
   return (

@@ -1,6 +1,8 @@
 
-.account-container {
-  display: flex;
+.account-container,
+.no-account {
+  display: grid;
+  grid-template-columns: 400px 1fr;
   align-items: center;
   border-radius: 12px;
   gap: 10px;
@@ -29,19 +31,30 @@
 }
 
 /* Card */
-.account-card {
+.account-card,
+.account-card-sub {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--container-color);
   box-shadow: var(--container-shadow);
   border-radius: 8px;
-  min-width: 360px;
   height: calc(100% - 20px);
   padding: 10px;
   transition: 
     background-color 0.3s ease,
     color 0.3s ease;
+}
+.account-card-sub {
+  min-width: 300px;
+  .account-balance {
+    font-size: 30px;
+  }
+}
+.account-card-sub .account-header {
+  .account-name {
+    font-size: 16px;
+  }
 }
 
 /* Card header */
@@ -57,16 +70,20 @@
     color: var(--text-primary);
     font-size: 20px;
     font-weight: bold;
+    transition: color 0.3s ease;
   }
-  h {
+  .text-main {
     color: var(--text-secondary);
     font-size: 12px;
     margin-right: 3px;
+    font-weight: normal;
+    transition: color 0.3s ease;
   }
   p {
     color: var(--text-secondary);
     font-weight: bold;
     font-size: 14px;
+    transition: color 0.3s ease;
   }
   span {
     color: var(--btn-text);
@@ -100,13 +117,16 @@
 
 .account-total-expense,
 .account-total-income {
-  h {
+  .text-main {
     color: var(--text-secondary);
     font-size: 12px;
+    font-weight: normal;
+    transition: color 0.3s ease;
   }
   p {
     font-size: 14px;
     font-weight: bold;
+    transition: color 0.3s ease;
   }
 }
 .account-total-income {
@@ -117,4 +137,38 @@
 }
 .account-total-expense p {
   color: var(--down);
+}
+
+.no-account {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-disabled);
+  height: 200px;
+  transition: all 0.3s ease;
+
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    transform: rotate(10deg);
+    margin-bottom: 14px;
+  }
+
+  svg {
+    height: 100px;
+    width: 100px;
+    color: var(--text-disabled);
+    transform: scaleX(-1);
+  }
+}
+
+@media (max-width: 700px) {
+  .account-container {
+    grid-template-columns: 1fr;
+  }
+  .account-box {
+    display: none;
+  }
 }

@@ -1,5 +1,5 @@
 import './Sidebar.css'
-import { PiggyBank, PanelRight, PanelLeft, House, ArrowLeftRight, ChartPie, Wallet, Goal, CircleUserRound, Settings } from 'lucide-react'
+import { PiggyBank, PanelLeft, House, ArrowLeftRight, ChartPie, Wallet, Goal, CircleUserRound, Settings } from 'lucide-react'
 import { useState } from 'react'
 import { NavLink } from 'react-router'
 
@@ -20,7 +20,7 @@ export function Sidebar() {
         </NavLink>
 
         <button onClick={toggleSidebar}>
-          {isOpen ? <PanelLeft /> : <PanelRight />}
+          {isOpen ? <PanelLeft /> : <PiggyBank className="logo"/>}
         </button>
       </div>
 

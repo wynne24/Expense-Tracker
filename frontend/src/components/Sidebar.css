@@ -32,13 +32,19 @@ aside.hide {
   .sidebar-header {
     justify-content: space-between;
   }
+  .sidebar-header .logo {
+    color: var(--text-primary);
+    height: 30px;
+    width: 30px;
+    fill: rgba(255, 174, 189, 0.5);
+  }
   .sidebar-header a,
   .sidebar-header p {
     max-width: 0;
     opacity: 0;
   }
   .sidebar-header button {
-    transform: translateX(-6px);
+    transform: translateX(-12px);
   }
 
   .sidebar-list li a svg {
