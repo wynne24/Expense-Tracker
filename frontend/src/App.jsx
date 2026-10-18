@@ -7,7 +7,7 @@ import { DashboardPage }from './pages/dashboard/DashboardPage'
 import { GoalPage }from './pages/goal/GoalPage'
 import { AccountPage }from './pages/account/AccountPage'
 import { ProfilePage }from './pages/profile/ProfilePage'
-import '../../html and css/root.css'
+import './assets/root.css'
 
 function App() {
 

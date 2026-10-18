@@ -14,7 +14,7 @@ export function AccountForm({ dialogRef, addAccount, icons }) {
       icon: "piggy-bank",
       name: "New Account",
       type: "cash",
-      currency: "$",
+      currency: "฿",
       description: "",
       current: false,
       income: 0,

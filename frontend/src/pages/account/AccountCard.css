@@ -46,7 +46,7 @@
     color 0.3s ease;
 }
 .account-card-sub {
-  min-width: 300px;
+  min-width: 294px;
   .account-balance {
     font-size: 30px;
   }
@@ -169,6 +169,19 @@
     grid-template-columns: 1fr;
   }
   .account-box {
-    display: none;
+    height: 150px;
+  }
+  .account-box .account-card-sub {
+    min-width: 233px;
+  }
+  .account-box .account-header {
+    display: inline;
+    
+    .text-main {
+      display: none;
+    }
+  }
+  .account-balance {
+    padding: 0;
   }
 }

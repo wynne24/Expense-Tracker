@@ -40,11 +40,11 @@ ul {list-style: none;}
   font-weight: 600;
 }
 .list-header .sub-text {
-    color: var(--btn-secondary);
-    font-size: 14px;
-    margin: 2px 10px 0 0;
-    font-weight: normal;
-  }
+  color: var(--btn-secondary);
+  font-size: 14px;
+  margin: 2px 10px 0 0;
+  font-weight: normal;
+}
 .list-header .filter {
   border: none;
   border-radius: 12px;
@@ -124,6 +124,16 @@ ul {list-style: none;}
 @media (max-width: 700px) {
   .account-history-container {
     grid-template-columns: 1fr;
+  }
+
+  .list-header {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    
+    p {
+      flex: 0 0 auto;
+    }
   }
 
   .sub-text {
